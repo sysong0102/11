@@ -5,19 +5,12 @@
 
 int main(void) 
 {
-	int i = 10;
-	char c = 'a';
-	
-	int* iptr = &i;
-	char* cptr = &c;
-	int* iptr2 = iptr;
+	int i = 4; // 300으로 바꾸면 결과가 300, 300, 4로 다르게 나옴 
+		
+	int* pi = &i;
+	char* pc = &i;
 	
 	
-	
-	printf("i : %p\n%p (size:%i)\n", iptr, &i, sizeof(iptr));
-	printf("c : %p\n%p (size:%i)\n", cptr, &c, sizeof(cptr));
-	printf("iptr2: %p, %i\n", iptr2, *iptr2);
+	printf("%i, %i, %i\n", i, *pi, *pc);
 
-	
-	return 0;
 }
